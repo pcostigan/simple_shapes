@@ -34,6 +34,7 @@ class Diamond extends RootShape {
     super.shadowColor,
     super.shadowOffset,
     super.shadowBlurRadius,
+    super.radius,
     super.width,
     super.height,
     this.topWidth = 60.0,

@@ -25,10 +25,6 @@ class MessageBubble extends RootShape {
   /// Width of the tail at its base in logical pixels. Defaults to 15.
   final double tailWidth;
 
-  /// Corner radius of the rounded-rectangle bubble body in logical pixels.
-  /// Independent of [radius], which is not used by this shape. Defaults to 12.
-  final double borderRadius;
-
   const MessageBubble({
     super.key,
     super.borderColor,
@@ -43,11 +39,11 @@ class MessageBubble extends RootShape {
     super.shadowColor,
     super.shadowOffset,
     super.shadowBlurRadius,
+    super.radius,
     this.tailPosition = 0.5, // Default to bottom-center
     this.tailLength = 15.0,
     this.tailAngle = 180.0, // Default to pointing down
     this.tailWidth = 15.0,
-    this.borderRadius = 12.0,
   });
 
   @override
@@ -57,7 +53,6 @@ class MessageBubble extends RootShape {
         tailLength,
         tailAngle,
         tailWidth,
-        borderRadius,
       ];
 
   @override
@@ -78,7 +73,7 @@ class MessageBubble extends RootShape {
     if (bubbleRect.isEmpty) return path;
 
     // Add the main rounded rectangle body
-    path.addRRect(RRect.fromRectAndRadius(bubbleRect, Radius.circular(borderRadius)));
+    path.addRRect(RRect.fromRectAndRadius(bubbleRect, Radius.circular(resolvedRadius)));
 
     // Calculate tail base position on the bubble perimeter
     final Offset basePoint = _getPerimeterPoint(bubbleRect, tailPosition);

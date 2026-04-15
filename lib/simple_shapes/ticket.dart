@@ -5,9 +5,6 @@ import 'root_shape.dart';
 /// notch on each of two opposite edges, as seen on admission tickets or
 /// coupons.
 class Ticket extends RootShape {
-  /// Corner radius of the ticket rectangle in logical pixels. Defaults to 8.
-  final double cornerRadius;
-
   /// Radius of each semicircular punch-out notch in logical pixels. Defaults to 10.
   final double punchRadius;
 
@@ -35,7 +32,7 @@ class Ticket extends RootShape {
     super.shadowColor,
     super.shadowOffset,
     super.shadowBlurRadius,
-    this.cornerRadius = 8.0,
+    super.radius,
     this.punchRadius = 10.0,
     this.punchOnSides = true,
     this.punchPosition = 0.5,
@@ -44,7 +41,6 @@ class Ticket extends RootShape {
   @override
   List<Object?> get props => [
         ...super.props,
-        cornerRadius,
         punchRadius,
         punchOnSides,
         punchPosition,
@@ -60,7 +56,7 @@ class Ticket extends RootShape {
     final Rect rect = Rect.fromLTWH(0, 0, w, h);
     
     // Main body with rounded corners
-    path.addRRect(RRect.fromRectAndRadius(rect, Radius.circular(cornerRadius)));
+    path.addRRect(RRect.fromRectAndRadius(rect, Radius.circular(resolvedRadius)));
 
     // Create the "punches" (concave cutouts)
     final Path punches = Path();

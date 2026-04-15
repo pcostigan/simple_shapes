@@ -111,6 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     insideColor: Colors.amber,
                     radius: 8,
                     childSizeFactor: 0.6,
+                    shadowColor: Colors.transparent,
                     child: const Icon(Icons.star, color: Colors.white, size: 40),
                   ),
                   Heart(
@@ -122,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Star(
                     size: 100,
-                    points: 4,
+                    points: 20,
                     innerRadiusRatio: 0.4,
                     insideColor: Colors.yellow,
                     borderColor: Colors.orange,
@@ -141,7 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     tailPosition: 0.65,    // bottom-right area
                     tailAngle: 210,        // points down-left
                     tailLength: 18,
-                    borderRadius: 14,
+                    radius: 14,
                     child: const Padding(
                       padding: EdgeInsets.all(8),
                       child: Text('Hello!'),

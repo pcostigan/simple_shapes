@@ -18,6 +18,7 @@ class Badge3 extends RootShape {
     super.shadowColor,
     super.shadowOffset,
     super.shadowBlurRadius,
+    super.radius,
   });
 
   @override
