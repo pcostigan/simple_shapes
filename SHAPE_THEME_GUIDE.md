@@ -58,10 +58,10 @@ All shapes will automatically use your theme defaults:
 
 ```dart
 // Uses all theme defaults
-Pentagon(size: 100)
+const Pentagon(size: 100)
 
 // Override specific properties
-Pentagon(
+const Pentagon(
   size: 100,
   borderColor: Colors.red,  // Overrides theme's borderColor
   // Other properties still use theme defaults
@@ -97,7 +97,7 @@ For example:
 // - insideColor: theme's insideColor (no explicit param, uses theme)
 // - radius: theme's radius (no explicit param, uses theme)
 // - shadowOffset: Offset(1, 1) (explicit param, wins)
-Pentagon(
+const Pentagon(
   size: 100,
   borderColor: Colors.red,
   shadowOffset: Offset(1, 1),
@@ -182,23 +182,3 @@ All shape classes that extend `RootShape` support the full set of theme properti
 - `Ring`, `Gear`, `Badge1`, `Badge2`, `Badge3` (special shapes)
 - `Cross`, `Trapezoid`, `Rhombus`, `Wedge` (geometric shapes)
 - `MessageBubble`, `Ticket` (functional shapes)
-
-## Example: Dark Mode with ShapeTheme
-
-See `lib/shape_theme_example.dart` for a complete, runnable example demonstrating:
-- How to define and apply a ShapeTheme
-- How to override theme properties on individual shapes
-- How theme defaults cascade through to all shapes in your app
-
-Run it with:
-```bash
-flutter run -t lib/shape_theme_example.dart
-```
-
-## How It Works Internally
-
-1. **Theme Resolution**: When `RootShape.build()` is called, it resolves values using the priority order above.
-2. **Path Computation**: The resolved theme is temporarily stored so that `buildRoundedPath()` (and other geometry methods) can access theme values during path computation.
-3. **Painter Creation**: The painter is created with all resolved values, ensuring consistent rendering.
-
-This approach integrates seamlessly with Flutter's theming system and respects Material Design principles.
