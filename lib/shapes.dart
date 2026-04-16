@@ -1,14 +1,15 @@
 /// Barrel export for all shape widgets.
 ///
-/// Import all simple_shapes with a single line:
+/// Import all shapes with a single line:
 /// ```dart
-/// import 'simple_shapes/simple_shapes.dart';
+/// import 'simple_shapes/shapes.dart';
 /// ```
 ///
 /// Or if this is a package:
 /// ```dart
-/// import 'package:simple_shapes/simple_shapes.dart';
+/// import 'package:simple_shapes/shapes.dart';
 /// ```
+library;
 
 // Base class
 export 'simple_shapes/root_shape.dart';
