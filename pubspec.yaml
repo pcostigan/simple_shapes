@@ -1,10 +1,9 @@
 name: simple_shapes
-version: 1.0.1
+version: 1.0.3
 
 description:
-  A comprehensive Flutter widget library providing a wide variety of geometric
-  shapes with customizable properties like colors, borders, shadows, and corner
-  rounding. Includes polygons, stars, badges, and more. All shapes are themable.
+  Flutter widget library offering geometric shapes (polygons, stars, badges, and more) with 
+  customizable colors, borders, shadows, corner rounding, and theming.
 
 repository: https://github.com/pcostigan/simple_shapes
 issue_tracker: https://github.com/pcostigan/simple_shapes/issues

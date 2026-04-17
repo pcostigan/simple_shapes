@@ -1,8 +1,10 @@
 # simple_shapes
 
-A Flutter package providing a collection of customisable shape widgets. Every shape supports fill colour, border, shadow, rotation, corner rounding, and an optional child widget clipped to the shape's outline.
+A Flutter package providing a collection of customizable shape widgets. Every shape supports fill colour, border, shadow, rotation, corner rounding, and an optional child widget clipped to the shape's outline.
 
 ---
+
+![alt text](images/simple_shapes.png)
 
 ## Shapes included
 
