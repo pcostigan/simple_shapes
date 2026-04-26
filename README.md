@@ -4,8 +4,6 @@ A Flutter package providing a collection of customizable shape widgets. Every sh
 
 ---
 
-<img width="830" height="861" alt="Image" src="https://github.com/user-attachments/assets/76e52d5f-e36a-406b-aa67-0649597e2f99" />
-
 ## Shapes included
 
 | | | | |
@@ -18,8 +16,9 @@ A Flutter package providing a collection of customizable shape widgets. Every sh
 | Teardrop | Ticket | Trapezoid | Triangle |
 | Wedge | | | |
 
-Sample
-![Simple Shapes Gallery](images/screenshot.png)
+Simple Shape Gallery
+<img width="830" height="861" alt="Image" src="https://github.com/user-attachments/assets/76e52d5f-e36a-406b-aa67-0649597e2f99" />
+
 ---
 
 ## Installation
