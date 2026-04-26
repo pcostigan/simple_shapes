@@ -4,7 +4,7 @@ A Flutter package providing a collection of customizable shape widgets. Every sh
 
 ---
 
-![alt text](https://raw.githubusercontent.com/pcostigan/simple_shapesraimages/simple_shapes.png)
+![alt text](https://raw.githubusercontent.com/pcostigan/simple_shapes/images/simple_shapes.png?raw=true)
 
 ## Shapes included
 
